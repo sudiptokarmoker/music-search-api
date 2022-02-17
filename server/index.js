@@ -8,15 +8,7 @@ app.listen(PORT, () => {
 */
 
 var whitelist = [
-    'http://3.143.144.214:7001',
-    'http://3.143.144.214:8000',
-    'http://3.143.144.214:8001',
-    'http://localhost:8000', 
-    'http://localhost:8001', 
-    'http://localhost:7001', 
-    'http://137.184.18.53:8000',
-    'http://localhost:4002',
-    'http://159.203.56.79'
+    'http://localhost:8000'
   ];
 
   var corsOptions = {
