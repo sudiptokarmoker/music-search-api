@@ -10,3 +10,6 @@ go to
 3. done the server / api engine run !!!!
 
 next for client end, follow this steps : 
+1. go to client directory. you can use this command from root directory. command : "cd client"
+2. then "npm install"
+3. then "npm start"
