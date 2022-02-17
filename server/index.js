@@ -1,12 +1,8 @@
 const app = require('express')();
 const PORT = '8000';
-
-/*
-app.listen(PORT, () => {
-    console.log(`app listen on port http://localhost:${PORT}/`);
-});
-*/
-
+/**
+ * making white lists here for CORS issues
+ */
 var whitelist = [
     'http://localhost:8000'
   ];
@@ -30,12 +26,6 @@ app.use(require('cors')(corsOptions))
 
 // adding search route here
 require('./routes/api/v1/search/index')(app);
-
-app.get('/test', (req, res) => {
-    res.status(200).send({
-        'data' : 'hello called data'
-    });
-})
 
 app.get('*', function(req, res){
         res.status(404).send({
