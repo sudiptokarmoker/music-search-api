@@ -28,7 +28,9 @@ var whitelist = [
 app.use(require('cors')(corsOptions))
     .listen(PORT, () => { console.log(`Server started on HTTP port: http://localhost:${PORT}`) });
 
-    
+// adding search route here
+require('./routes/api/v1/search/index')(app);
+
 app.get('/test', (req, res) => {
     res.status(200).send({
         'data' : 'hello called data'
