@@ -1,0 +1,3 @@
+reqiuirements : 
+- On the first page we would see a search bar where you can enter the query terms
+- 
