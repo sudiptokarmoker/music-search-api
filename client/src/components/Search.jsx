@@ -4,7 +4,7 @@ import { ResultData } from "./ResultData";
 const Search = () => {
   const [searchText, setSearchText] = useState("");
   const [error, setError] = useState("");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState({});
 
   const searchTrigger = (e) => {  
     e.preventDefault();
@@ -14,18 +14,6 @@ const Search = () => {
         .then(data => {
             setResult(data.data);
         });
-    /*
-    fetch("http://localhost:8000/api/v1/search/index?q=" + searchText, {
-      //method: "GET",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ searchText }),
-    }).then(async (response) => {
-        const data = await response.json();
-        console.log(data);
-    }).catch(error => {
-        setError(error);
-    })
-  */    
   };
   return (
     <>
